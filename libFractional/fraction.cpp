@@ -22,16 +22,16 @@ Fraction::Fraction(int whole, int nominator, int denominator)
 Fraction::Fraction(string expression)
 {
 	int whole, nominator, denominator;
-	size_t posAt = expression.find('&');
-	size_t posSlash = expression.find('/');
+	size_t andPos = expression.find('&');
+	size_t slashPos = expression.find('/');
 
-	if (posAt != string::npos)
+	if (andPos != string::npos)
 	{
-		whole = stoi(expression.substr(0, posAt));
-		if (posSlash != string::npos)
+		whole = stoi(expression.substr(0, andPos));
+		if (slashPos != string::npos)
 		{
-			nominator = stoi(expression.substr(posAt + 1, posSlash - posAt +1));
-			denominator = stoi(expression.substr(posSlash+1));
+			nominator = stoi(expression.substr(andPos + 1, slashPos - andPos +1));
+			denominator = stoi(expression.substr(slashPos+1));
 		}
 		else
 		{
@@ -40,11 +40,11 @@ Fraction::Fraction(string expression)
 	}
 	else
 	{
-		if (posSlash != string::npos)
+		if (slashPos != string::npos)
 		{
 			whole = 0;
-			nominator = stoi(expression.substr(0, posSlash));
-			denominator = stoi(expression.substr(posSlash+1));
+			nominator = stoi(expression.substr(0, slashPos));
+			denominator = stoi(expression.substr(slashPos+1));
 		}
 		else
 		{
