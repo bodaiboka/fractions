@@ -1,7 +1,6 @@
-#include "fraction.h"
+#include "include/fraction.h"
 #include <stdexcept>
 #include <sstream>
-#include <iostream>
 
 void Fraction::init(int whole, int nominator, int denominator)
 {
@@ -99,11 +98,14 @@ Fraction Fraction::operator/(const Fraction& fraction) const
 	return Fraction(0, m_nominator * fraction.denominator(), m_denominator * fraction.nominator());
 }
 
-int Fraction::gcd(int a, int b) {
-	if(a%b == 0) {
+int Fraction::gcd(int a, int b)
+{
+	if(a%b == 0)
+    {
 		return b;
 	}
-	else {
+	else
+    {
 		return gcd(b, a%b);
 	}
 }
