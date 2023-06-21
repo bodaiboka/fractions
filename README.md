@@ -85,8 +85,8 @@ This project includes unit tests that are written using the [GoogleTest](https:/
     cmake --build .
     cmake --install .
     ```
-
-3. **Set Environment Variable**: Create an environment variable named `GOOGLE_TEST` and set its value to the path where GoogleTest was installed. This will allow the build script to find the GoogleTest libraries.
+    
+3. **Set Environment Variable**: Create an environment variable named `GOOGLE_TEST` and set its value to the path where GoogleTest was installed. This will allow the build script to find the GoogleTest libraries. In case you do not define this variable, CMake is configured to skip building the test application.
 
 4. **Build the Test Application (Windows)**: If you are on Windows, run the provided batch script `build_windows_release.bat`. This script will build the library and link it to the test application.
     ```sh
