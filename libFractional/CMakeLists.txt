@@ -19,6 +19,10 @@ if(ANDROID)
     COMMENT "Copying the library to architecture-specific destination folder"
     )
 else()
+    # Enable testing for the project
+    enable_testing()
     add_library(fractional STATIC ${SOURCES})
+    # Add subdirectories
+    add_subdirectory(tests)
 endif()
 
