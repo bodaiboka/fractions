@@ -1,4 +1,17 @@
+
 # Fractions
+
+## Table of Contents
+  - [Description](#description)
+    - [Example](#example)
+    - [Notes](#notes)
+  - [Installation](#installation)
+    - [Download Executables](#download-executables)
+    - [Building the Console Application](#building-the-console-application)
+    - [Building the Android Application](#building-the-android-application)
+  - [Using the Core Library in Your Projects](#using-the-core-library-in-your-projects)
+  - [Documentation](#documentation)
+  - [Screenshots](#screenshots)
 
 ## Description
 Fractions is an application that takes operations on fractions as input and produces a fractional result. 
