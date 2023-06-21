@@ -9,6 +9,7 @@
     - [Download Executables](#download-executables)
     - [Building the Console Application](#building-the-console-application)
     - [Building the Android Application](#building-the-android-application)
+    - [Building and Running Unit Tests](#building-and-running-unit-tests)
   - [Using the Core Library in Your Projects](#using-the-core-library-in-your-projects)
   - [Documentation](#documentation)
   - [Screenshots](#screenshots)
@@ -61,6 +62,47 @@ To build the Android Application, follow these steps:
 8. Open the Android Project located in `app/android` with Android Studio and build the application.
 
 __Note:__ Alternatively, if you don't plan to modify the library code, you can simply download the latest release, and copy the `jniLibs` directory into `app/android/app/src/main`. Then, compile the Android Application using Android Studio.
+
+### Building and Running Unit Tests
+
+This project includes unit tests that are written using the [GoogleTest](https://github.com/google/googletest) framework. If you would like to build and run the tests, or contribute by adding more tests, follow the steps below:
+
+#### Prerequisites
+
+- [CMake](https://cmake.org/download/) (version 3.8 or higher)
+- A C++ compiler compatible with C++11
+
+#### Steps
+
+1. **Clone GoogleTest**: Clone the GoogleTest repository from GitHub. You can do this by running `git clone https://github.com/google/googletest.git` in your terminal or command prompt.
+
+2. **Build and Install GoogleTest**: Change to the cloned `googletest` directory, and then use CMake to build and install it.
+    ```sh
+    cd googletest
+    mkdir build
+    cd build
+    cmake ..
+    cmake --build .
+    cmake --install .
+    ```
+
+3. **Set Environment Variable**: Create an environment variable named `GOOGLE_TEST` and set its value to the path where GoogleTest was installed. This will allow the build script to find the GoogleTest libraries.
+
+4. **Build the Test Application (Windows)**: If you are on Windows, run the provided batch script `build_windows_release.bat`. This script will build the library and link it to the test application.
+    ```sh
+    build_windows_release.bat
+    ```
+    *Note: The test application will be placed in the `build/windows-release/tests` directory.*
+
+5. **Run the Tests**: To execute the tests, navigate to the build directory and use the `ctest` command or directly execute the test application.
+    ```sh
+    cd build/windows-release/tests
+    ctest
+    # or
+    Fractional_Tests.exe
+    ```
+
+By following these steps, you should be able to build and run the unit tests.
 
 ## Using the core library in Your Projects
 If you wish to incorporate the core library into your own projects, first build the library for either Windows or Android by utilizing the appropriate script file within the libFractional directory.
