@@ -39,7 +39,7 @@ int main(int argc, char** argv)
 		try
 		{
 			result = produce_fractional_result(input); // parse the input and catch possible exceptions
-			cout << result << endl;
+			cout << "= " << result << endl;
 		}
 		catch(const runtime_error& e)
 		{

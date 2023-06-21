@@ -18,7 +18,7 @@ if(ANDROID)
             $<$<STREQUAL:${ANDROID_ABI},armeabi-v7a>:${CMAKE_CURRENT_SOURCE_DIR}/../app/android/app/src/main/jniLibs/armeabi-v7a/libfractional.so>
     COMMENT "Copying the library to architecture-specific destination folder"
     )
-elseif(WINDOWS)
+else()
     add_library(fractional STATIC ${SOURCES})
 endif()
 
