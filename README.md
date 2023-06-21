@@ -88,15 +88,15 @@ This project includes unit tests that are written using the [GoogleTest](https:/
 
 3. **Set Environment Variable**: Create an environment variable named `GOOGLE_TEST` and set its value to the path where GoogleTest was installed. This will allow the build script to find the GoogleTest libraries.
 
-4. **Build the Test Application (Windows)**: If you are on Windows, run the provided batch script `build_windows_release_test.bat`. This script will build the library and link it to the test application.
+4. **Build the Test Application (Windows)**: If you are on Windows, run the provided batch script `build_windows_release.bat`. This script will build the library and link it to the test application.
     ```sh
-    build_windows_release_test.bat
+    build_windows_release.bat
     ```
-    *Note: The test application will be placed in the `build/windows-release-test/tests` directory.*
+    *Note: The test application will be placed in the `build/windows-release/tests` directory.*
 
 5. **Run the Tests**: To execute the tests, navigate to the build directory and use the `ctest` command or directly execute the test application.
     ```sh
-    cd build/windows-release-test/tests
+    cd build/windows-release/tests
     ctest
     # or
     Fractional_Tests.exe
