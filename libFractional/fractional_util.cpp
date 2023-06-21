@@ -1,5 +1,5 @@
-#include "include/fraction.h"
-#include "include/fractional_util.h"
+#include "fraction.h"
+#include "fractional_util.h"
 
 string produce_fractional_result(string input)
 {

@@ -6,6 +6,7 @@ import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,14 +28,30 @@ class MainActivity : AppCompatActivity() {
         inputText.setOnEditorActionListener { _, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEND ||
                 (event?.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)) {
-                val input = inputText.text.toString()
-                val output = produceFractionalResult(input)
-                outputText.append("? $input\n= $output\n\n")
-                inputText.text.clear()
+                try {
+                    val input = inputText.text.toString()
+                    val output = produceFractionalResult(input)
+                    outputText.append("? $input\n= $output\n\n")
+                    inputText.text.clear()
+                }
+                catch (exception: java.lang.RuntimeException) {
+                    showMessage(exception.message!!)
+                }
+                catch (exception: java.lang.IllegalArgumentException) {
+                    showMessage(exception.message!!)
+                }
                 true
             } else {
                 false
             }
         }
+    }
+
+    fun showMessage(message: String) {
+        AlertDialog.Builder(this)
+            .setTitle("Invalid input")
+            .setMessage(message)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .show()
     }
 }
