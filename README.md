@@ -41,25 +41,27 @@ You can download the latest release of the project [here](https://github.com/bod
 ### Building the Console Application
 To build the Console Application, follow these steps:
 1. Install `cmake`.
-2. Add `cmake` to the PATH environment variable. Example: `C:\Program Files\CMake\bin\`
+2. Add `cmake` to the PATH environment variable, for example: `C:\Program Files\CMake\bin\`.
 3. Install `MinGW`.
-4. Add `MinGW` to the PATH environment variable. Example: `C:\Program Files\mingw64\bin\`
-5. Build the fractions library located in the `libFractional` directory by running the `build_windows_release.bat` script. It will create the required static library for the Console Application.
-6. Build the Console Application in the `app/windows` directory by running the `build.bat` batch file.
-7. After successful compilation, the executable should appear in the `app/windows` directory as `app.exe`.  
+4. Add `MinGW` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
+5. Restart any open command prompt windows, or open a new command prompt window, to ensure it's using the updated PATH.
+6. Build the fractions library located in the `libFractional` directory by running the `build_windows_release.bat` script. It will create the required static library for the Console Application.
+7. Build the Console Application in the `app/windows` directory by running the `build.bat` batch file.
+8. After successful compilation, the executable should appear in the `app/windows` directory as `app.exe`.  
 
 __Note:__ As an alternative, if you don't intend to modify the library code, you can download the latest release and copy `libfractional.a` into the `app/windows` directory. Then compile the Console Application. Make sure to update the library path in the build.bat file before compiling the Console Application.
 
 ### Building the Android Application
 To build the Android Application, follow these steps:
 1. Install Android NDK.
-2. Create an environment variable named `ANDROID_NDK`, and set its value to the path of the Android NDK.
+2. Create an environment variable named `ANDROID_NDK`, and set its value to the path of the Android NDK, for example: `C:\Users\username\AppData\Local\Android\Sdk\ndk\25.2.9519653`.
 3. Install `cmake`.
-4. Add `cmake` to the PATH environment variable.
+4. Add `cmake` to the PATH environment variable, for example: `C:\Program Files\CMake\bin\`.
 5. Install `MinGW`.
-6. Add `MinGW` to the PATH environment variable.
-7. Build the fractions library located in the `libFractional` directory by running the `build_android_release.bat` script. This will create the required shared library and copy it into the Android project.
-8. Open the Android Project located in `app/android` with Android Studio and build the application.
+6. Add `MinGW` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
+7. Restart any open command prompt windows, or open a new command prompt window, to ensure it's using the updated PATH.
+8. Build the fractions library located in the `libFractional` directory by running the `build_android_release.bat` script. This will create the required shared library and copy it into the Android project.
+9. Open the Android Project located in `app/android` with Android Studio and build the application.
 
 __Note:__ Alternatively, if you don't plan to modify the library code, you can simply download the latest release, and copy the `jniLibs` directory into `app/android/app/src/main`. Then, compile the Android Application using Android Studio.
 
@@ -86,13 +88,14 @@ This project includes unit tests that are written using the [GoogleTest](https:/
     cmake --install .
     ```
     
-3. **Set Environment Variable**: Create an environment variable named `GOOGLE_TEST` and set its value to the path where GoogleTest was installed. This will allow the build script to find the GoogleTest libraries. In case you do not define this variable, CMake is configured to skip building the test application.
+3. **Set Environment Variable**: Create an environment variable named `GOOGLE_TEST` and set its value to the path where GoogleTest was installed. This will allow the build script to find the GoogleTest libraries. In case you do not define this variable, CMake is configured to skip building the test application. Restart any open command prompt windows, or open a new command prompt window, to ensure it can access the newly added GOOGLE_TEST environment variable.
 
 4. **Build the Test Application (Windows)**: If you are on Windows, run the provided batch script `build_windows_release.bat`. This script will build the library and link it to the test application.
     ```sh
+    cd libFractional
     build_windows_release.bat
     ```
-    *Note: The test application will be placed in the `build/windows-release/tests` directory.*
+    *Note: The test application will be placed in the `libFractional/build/windows-release/tests` directory.*
 
 5. **Run the Tests**: To execute the tests, navigate to the build directory and execute the test application.
     ```sh
