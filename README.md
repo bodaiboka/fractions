@@ -45,9 +45,17 @@ To build the Console Application, follow these steps:
 3. Install `MinGW-w64`. You can download from [here](https://winlibs.com/#download-release).
 4. Add `MinGW-w64` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
 5. Restart any open command prompt windows, or open a new command prompt window, to ensure it's using the updated PATH.
-6. Build the fractions library located in the `libFractional` directory by running the `build_windows_release.bat` script. It will create the required static library for the Console Application.
-7. Build the Console Application in the `app/windows` directory by running the `build.bat` batch file.
-8. After successful compilation, the executable should appear in the `app/windows` directory as `app.exe`.  
+6. Build the fractions library located in the `libFractional` directory by running the `build_windows_release.bat` script. It will create the required `libfractional.a` static library for the Console Application.
+    ```sh
+    cd libFractional
+    build_windows_release.bat
+    ```
+8. Build the Console Application in the `app/windows` directory by running the `build.bat` batch file.
+   ```sh
+    cd ..\app\windows
+    build.bat
+    ```
+9. After successful compilation, the executable should appear in the `app/windows` directory as `app.exe`.  
 
 __Note:__ As an alternative, if you don't intend to modify the library code, you can download the latest release and copy `libfractional.a` into the `app/windows` directory. Then compile the Console Application. Make sure to update the library path in the `build.bat` file before compiling the Console Application.
 
@@ -60,7 +68,12 @@ To build the Android Application, follow these steps:
 5. Install `MinGW-w64`. You can download from [here](https://winlibs.com/#download-release).
 6. Add `MinGW-w64` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
 7. Restart any open command prompt windows, or open a new command prompt window, to ensure it's using the updated PATH.
-8. Build the fractions library located in the `libFractional` directory by running the `build_android_release.bat` script. This will create the required shared library and copy it into the Android project.
+8. To construct the fractions library, located within the libFractional directory, you will need to execute both `build_android_32bit.bat` and `build_android_64bit.bat` scripts. These scripts facilitate the building process for both 32-bit and 64-bit architectures respectively. Once the execution is complete, the required shared libraries will be generated and automatically transferred into the Android project directory.
+   ```sh
+    cd libFractional
+    build_android_32bit.bat
+    build_android_64bit.bat
+    ```
 9. Open the Android Project located in `app/android` with Android Studio and build the application.
 
 __Note:__ Alternatively, if you don't plan to modify the library code, you can simply download the latest release, and copy the `jniLibs` directory into `app/android/app/src/main`. Then, compile the Android Application using Android Studio.
