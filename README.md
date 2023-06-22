@@ -5,7 +5,7 @@
   - [Description](#description)
     - [Example](#example)
     - [Notes](#notes)
-  - [Installation](#installation)
+  - [Setup and Build Process](#setup-and-build-process)
     - [Download Executables](#download-executables)
     - [Building the Console Application](#building-the-console-application)
     - [Building the Android Application](#building-the-android-application)
@@ -29,7 +29,7 @@ Example usage (where '?' represents the command prompt):
 - Mixed numbers should be represented in the form `whole&numerator/denominator`. For example, "3&1/4", "-1&7/8".
 - Improper fractions, whole numbers, and negative numbers are allowed as operands.
 
-## Installation
+## Setup and Build Process
 
 ### Download Executables
 If you prefer not to compile the application yourself, you can download the latest release instead. This release includes a Console Application located in the `app_windows` directory, an Android Application in the `app_android` directory, and the core library built for both Windows and Android, found in the `lib_windows` and `lib_android` directories, respectively.
