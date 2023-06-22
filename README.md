@@ -12,7 +12,7 @@
     - [Building and Running Unit Tests](#building-and-running-unit-tests)
   - [Using the Core Library in Your Projects](#using-the-core-library-in-your-projects)
   - [Documentation](#documentation)
-  - [Screenshots](#screenshots)
+  - [Demo Video](#demo-video)
 
 ## Description
 Fractions is an application that takes operations on fractions as input and produces a fractional result. 
@@ -132,13 +132,7 @@ The `docs` directory contains supplementary documentation and resources for the 
 - Flowchart: A flowchart depicting the structure and flow of the Console Application is available as an HTML file named `flowchart.html`. You can also view the flowchart online by clicking [here](https://bodaiboka.github.io/fractions/flowchart.html).
 - Screenshots: Screenshots showcasing the Android Application can be found in the `docs/android/screenshots` directory. These images provide visual insight into the features and interface of the app.
 
-## Screenshots
-<p align="center">
-<img src="./docs/android/screenshots/enter_expression_1.png" alt="Screenshot of the app" height="500"/>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" width="40"/>
-<img src="./docs/android/screenshots/enter_expression_2.png" alt="Screenshot of the app" height="500"/>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" width="40"/>
-<img src="./docs/android/screenshots/enter_expression_3.png" alt="Screenshot of the app" height="500"/>
-</p>
+## Demo video
 
+https://github.com/bodaiboka/fractions/assets/8951349/4b06b078-6ee3-48e5-b2c0-3d2ce504fe65
 
