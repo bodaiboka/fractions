@@ -132,7 +132,7 @@ The `docs` directory contains supplementary documentation and resources for the 
 - Flowchart: A flowchart depicting the structure and flow of the Console Application is available as an HTML file named `flowchart.html`. You can also view the flowchart online by clicking [here](https://bodaiboka.github.io/fractions/flowchart.html).
 - Screenshots: Screenshots showcasing the Android Application can be found in the `docs/android/screenshots` directory. These images provide visual insight into the features and interface of the app.
 
-## Demo video
+## Demo Video
 
 https://github.com/bodaiboka/fractions/assets/8951349/4b06b078-6ee3-48e5-b2c0-3d2ce504fe65
 
