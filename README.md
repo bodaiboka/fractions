@@ -32,24 +32,24 @@ Example usage (where '?' represents the command prompt):
 ## Installation
 
 ### Download Executables
-If you don't want to compile the application yourself, you can download the latest release. The release includes a Console Application, an Android Application, and the core library built for Windows and Android.  
+If you prefer not to compile the application yourself, you can download the latest release instead. This release includes a Console Application located in the `app_windows` directory, an Android Application in the `app_android` directory, and the core library built for both Windows and Android, found in the `lib_windows` and `lib_android` directories, respectively.
 You can download the latest release of the project [here](https://github.com/bodaiboka/fractions/releases/latest).
 
-- The Console Application can be launched by double-clicking on it or typing its name in a terminal.
-- To install the Android Application, copy the `.apk` file to your device and install it by tapping on it. Note: You might need to enable installation from unknown sources in your settings.
+- You can launch the Console Application in two ways: either by double-clicking on the `fractions.exe` file, or by typing its name into a terminal and pressing enter.
+- To install the Android Application, transfer the `fractions.apk` file to your device. Once it's on your device, locate the file and tap on it to start the installation process. Please note: Depending on your device's security settings, you may need to enable the installation of apps from unknown sources in your device's settings before proceeding with the installation.
 
 ### Building the Console Application
 To build the Console Application, follow these steps:
-1. Install `cmake`.
+1. Install `cmake`. You can download from [here](https://cmake.org/download/).
 2. Add `cmake` to the PATH environment variable, for example: `C:\Program Files\CMake\bin\`.
-3. Install `MinGW`.
-4. Add `MinGW` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
+3. Install `MinGW-w64`. You can download from [here](https://winlibs.com/#download-release).
+4. Add `MinGW-w64` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
 5. Restart any open command prompt windows, or open a new command prompt window, to ensure it's using the updated PATH.
 6. Build the fractions library located in the `libFractional` directory by running the `build_windows_release.bat` script. It will create the required static library for the Console Application.
 7. Build the Console Application in the `app/windows` directory by running the `build.bat` batch file.
 8. After successful compilation, the executable should appear in the `app/windows` directory as `app.exe`.  
 
-__Note:__ As an alternative, if you don't intend to modify the library code, you can download the latest release and copy `libfractional.a` into the `app/windows` directory. Then compile the Console Application. Make sure to update the library path in the build.bat file before compiling the Console Application.
+__Note:__ As an alternative, if you don't intend to modify the library code, you can download the latest release and copy `libfractional.a` into the `app/windows` directory. Then compile the Console Application. Make sure to update the library path in the `build.bat` file before compiling the Console Application.
 
 ### Building the Android Application
 To build the Android Application, follow these steps:
@@ -57,8 +57,8 @@ To build the Android Application, follow these steps:
 2. Create an environment variable named `ANDROID_NDK`, and set its value to the path of the Android NDK, for example: `C:\Users\username\AppData\Local\Android\Sdk\ndk\25.2.9519653`.
 3. Install `cmake`.
 4. Add `cmake` to the PATH environment variable, for example: `C:\Program Files\CMake\bin\`.
-5. Install `MinGW`.
-6. Add `MinGW` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
+5. Install `MinGW-w64`. You can download from [here](https://winlibs.com/#download-release).
+6. Add `MinGW-w64` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
 7. Restart any open command prompt windows, or open a new command prompt window, to ensure it's using the updated PATH.
 8. Build the fractions library located in the `libFractional` directory by running the `build_android_release.bat` script. This will create the required shared library and copy it into the Android project.
 9. Open the Android Project located in `app/android` with Android Studio and build the application.
