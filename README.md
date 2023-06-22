@@ -53,9 +53,9 @@ __Note:__ As an alternative, if you don't intend to modify the library code, you
 
 ### Building the Android Application
 To build the Android Application, follow these steps:
-1. Install Android NDK.
+1. Install `Android NDK`. You can do it in Android Studio: open the `SDK Manager`, switch to the SDK Tools tab and check the boxes for `NDK (Side by Side)` and `CMake`, then click OK to start the installation.
 2. Create an environment variable named `ANDROID_NDK`, and set its value to the path of the Android NDK, for example: `C:\Users\username\AppData\Local\Android\Sdk\ndk\25.2.9519653`.
-3. Install `cmake`.
+3. Install `cmake`. You can download from [here](https://cmake.org/download/).
 4. Add `cmake` to the PATH environment variable, for example: `C:\Program Files\CMake\bin\`.
 5. Install `MinGW-w64`. You can download from [here](https://winlibs.com/#download-release).
 6. Add `MinGW-w64` to the PATH environment variable, for example: `C:\Program Files\mingw64\bin\`.
