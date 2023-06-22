@@ -41,9 +41,9 @@ You can download the latest release of the project [here](https://github.com/bod
 ### Building the Console Application
 To build the Console Application, follow these steps:
 1. Install `cmake`.
-2. Add `cmake` to the PATH environment variable.
+2. Add `cmake` to the PATH environment variable. Example: `C:\Program Files\CMake\bin\`
 3. Install `MinGW`.
-4. Add `MinGW` to the PATH environment variable.
+4. Add `MinGW` to the PATH environment variable. Example: `C:\Program Files\mingw64\bin\`
 5. Build the fractions library located in the `libFractional` directory by running the `build_windows_release.bat` script. It will create the required static library for the Console Application.
 6. Build the Console Application in the `app/windows` directory by running the `build.bat` batch file.
 7. After successful compilation, the executable should appear in the `app/windows` directory as `app.exe`.  
@@ -94,11 +94,9 @@ This project includes unit tests that are written using the [GoogleTest](https:/
     ```
     *Note: The test application will be placed in the `build/windows-release/tests` directory.*
 
-5. **Run the Tests**: To execute the tests, navigate to the build directory and use the `ctest` command or directly execute the test application.
+5. **Run the Tests**: To execute the tests, navigate to the build directory and execute the test application.
     ```sh
     cd build/windows-release/tests
-    ctest
-    # or
     Fractional_Tests.exe
     ```
 
