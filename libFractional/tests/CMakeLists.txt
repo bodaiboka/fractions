@@ -1,5 +1,9 @@
 set(GOOGLE_TEST_ROOT $ENV{GOOGLE_TEST})
 
+if (WIN32)
+  string(REGEX REPLACE "\\\\" "/" GOOGLE_TEST_ROOT "${GOOGLE_TEST_ROOT}")
+endif()
+
 set(GTEST_LIBRARY "${GOOGLE_TEST_ROOT}/lib/libgtest.a")
 set(GTEST_INCLUDE_DIR "${GOOGLE_TEST_ROOT}/include/")
 set(GTEST_MAIN_LIBRARY "${GOOGLE_TEST_ROOT}/lib/libgtest_main.a")
